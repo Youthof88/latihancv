@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table, th , td {
+            border: 3px solid rgba(0, 0, 0, 0);
+            border-collapse: collapse;
+            }
+    </style>
+</head>
+<body>
+        <form name="datadiri">
+                <fieldset>
+                    <legend><strong>Personal Data</strong></legend>
+            
+                    <p>
+                        <label for='nama'>Nama:</label>
+                        <input type="text" id='nama'>
+                    </p>
+                    <p>
+                        <label for='tempat'>Tempat/Tanggal Lahir:</label>
+                        <input type='text' id='tempat'>
+
+                        <label for='usia'>mm/dd/yyyy:</label>
+                        <input type='number' id='usia'>
+                    </p>
+                    <p>Gender:
+                        <input type='radio' onclick="kelaminKu(this.value)" name = 'sex' value= 'Pria'> Pria
+                        <input type='radio' onclick="kelaminKu(this.value)" name = 'sex' value= 'Wanita'> Wanita
+                    </p>
+                    <p>
+                        <label for='telepon'>Telepon: </label>
+                        <input type='number' id='telepon'>
+                    </p>
+                    <p>
+                        <label for='email'>Email:</label>
+                        <input type='text' id='email'>
+                    </p>
+                    
+                </fieldset>
+        </form>
+        <form>
+                <fieldset>
+                    <legend><strong>Riwayat Pendidikan</strong></legend>
+            
+                    <p>
+                            <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Nama institusi</th>
+                                        <th>Tahun lulus</th>
+                                    </tr>
+                                    <tr>
+                                        <td>SD </td>
+                                        <td><input type='text' id='sd'></td>
+                                        <td><input type='number' id='sd lulus'></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMP </td>
+                                        <td><input type='text' id='smp'></td>
+                                        <td><input type='number' id='smp lulus'></td>
+                                    </tr>
+                                    <tr>
+                                        <td>SMA/SMK </td>
+                                        <td><input type='text' id='sma'></td>
+                                        <td><input type='number' id='sma lulus'></td>
+                                    </tr>
+                                    <tr>
+                                        <td>S1 </td>
+                                        <td><input type='text' id='s1'></td>
+                                        <td><input type='number' id='s1 lulus'></td>
+                                    </tr>
+                            </table>
+                </fieldset>
+        </form>
+        <form>
+                <fieldset>
+                    <legend><strong>Riwayat Pekerjaan</strong></legend>
+            
+                    <p>
+                            <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>Nama perusahaan</th>
+                                        <th>Lama bekerja</th>
+                                        <th>Posisi</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type='text' id='perusahaan1'></td>
+                                        <td><input type='number' id='lama1'></td>
+                                        <td><input type='text' id='posisi1'></td>
+                                        <td><input type="checkbox" id='cek1'>Check bila tidak ada</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type='text' id='perusahaan2'></td>
+                                        <td><input type='number' id='lama2'></td>
+                                        <td><input type='text' id='posisi2'></td>
+                                        <td><input type="checkbox" id='cek2'>Check bila tidak ada</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type='text' id='perusahaan3'></td>
+                                        <td><input type='number' id='lama3'></td>
+                                        <td><input type='text' id='posisi3'></td>
+                                        <td><input type="checkbox" id='cek3'>Check bila tidak ada</td>
+                                    </tr>
+                                    
+                            </table>
+                </fieldset>
+        </form>
+
+        <p>
+            <input type= 'submit' onclick='fungsiKu()' value='SUBMIT'>
+        </p>
+
+        <script>
+                
+                var d = document.datadiri.sex.value; // document.formname.inputname.value
+                var kelamin = '';
+
+            function kelaminKu(ii) {
+
+                if (d == 'Pria') {
+                    kelamin = ii
+                    return kelamin}
+                else {kelamin = ii
+                    return kelamin}
+                    }
+
+            function fungsiKu() {
+
+                // variabel data diri
+
+                var a = document.getElementById('nama').value;
+                var b = document.getElementById('tempat').value;
+                var c = document.getElementById('usia').value;
+                var bulanan = c.slice(0,2);
+                var tanggalan = c.slice(2,4);
+                var tahunan = c.slice(4,8);
+                var y = document.getElementById('telepon').value;
+                var z = document.getElementById('email').value;
+
+                // variabel sekolah
+                var e = document.getElementById('sd').value;
+                var f = document.getElementById('sd lulus').value;
+                var g = document.getElementById('smp').value;
+                var h = document.getElementById('smp lulus').value;
+                var i = document.getElementById('sma').value;
+                var j = document.getElementById('sma lulus').value;
+                var k = document.getElementById('s1').value;
+                var l = document.getElementById('s1 lulus').value;
+
+                // variabel pekerjaan
+                var m = document.getElementById('perusahaan1').value;
+                var n = document.getElementById('lama1').value;
+                var o = document.getElementById('posisi1').value;
+                var p = document.getElementById('cek1').checked;
+                var q = document.getElementById('perusahaan2').value;
+                var r = document.getElementById('lama2').value;
+                var s = document.getElementById('posisi2').value;
+                var t = document.getElementById('cek2').checked;
+                var u = document.getElementById('perusahaan3').value;
+                var v = document.getElementById('lama3').value;
+                var w = document.getElementById('posisi3').value;
+                var x = document.getElementById('cek3').checked;
+
+                var tambahanData = ''
+                if(p==false) {
+                    tambahanData += (
+                    +'<tr>' +
+                        '<td>' + m + '</td>' +
+                        '<td>' + n + '</td>' +
+                        '<td>' + o + '</td>' +
+                    '</tr>' )
+                }
+                if(t==false) {
+                    tambahanData += (
+                    +'<tr>' +
+                        '<td>' + q + '</td>' +
+                        '<td>' + r + '</td>' +
+                        '<td>' + s + '</td>' +
+                    '</tr>' )
+                }
+                if(x==false) {
+                    tambahanData += (
+                    +'<tr>' +
+                        '<td>' + u + '</td>' +
+                        '<td>' + v + '</td>' +
+                        '<td>' + w + '</td>' +
+                    '</tr>' )
+                }
+                else {tambahanData += ''};
+
+                document.getElementById('output').innerHTML =
+
+                '<tr>' +
+                    '<td bgcolor=black colspan="4" style="color: white";>' + 'Personal Data' + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'Nama:' + '</td>' +
+                    '<td>' + a + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'Tempat/Tangal Lahir:' + '</td>' +
+                    '<td>' + b + ' , ' + tahunan + ' - ' + bulanan + ' - ' + tanggalan + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'Gender:' + '</td>' +
+                    '<td>' + kelamin + '</td>' +
+                '</tr>' +
+                
+                '<tr>' +
+                    '<td>' + 'Telepon:' + '</td>' +
+                    '<td>' + y + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'Email:' + '</td>' +
+                    '<td>' + z + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td bgcolor=black colspan="4" style="color: white";>' + 'Riwayat Pendidikan' + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'SD' + '</td>' +
+                    '<td>' + e + '</td>' +
+                    '<td>' + 'Tahun lulus, ' + '</td>' +
+                    '<td>' + f + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'SMP' + '</td>' +
+                    '<td>' + g + '</td>' +
+                    '<td>' + 'Tahun lulus, ' + '</td>' +
+                    '<td>' + h + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'SMA/K' + '</td>' +
+                    '<td>' + i + '</td>' +
+                    '<td>' + 'Tahun lulus, ' + '</td>' +
+                    '<td>' + j + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'S1' + '</td>' +
+                    '<td>' + k + '</td>' +
+                    '<td>' + 'Tahun lulus, ' + '</td>' +
+                    '<td>' + l + '</td>' +
+                '</tr>' 
+
+                +'<tr>' +
+                '<td bgcolor=black colspan="4" style="color: white";>' + 'Riwayat Pekerjaan' + '</td>' +
+                '</tr>' +
+
+                '<tr>' +
+                    '<td>' + 'Nama Perusahaan' + '</td>' +
+                    '<td>' + 'Lama Bekerja' + '</td>' +
+                    '<td>' + 'Posisi' + '</td>' +
+                '</tr>' + tambahanData;
+                
+            }
+
+        </script>
+</body>
+</html>
