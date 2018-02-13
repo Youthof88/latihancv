@@ -14,68 +14,68 @@
 </head>
 <body>
         <form name="datadiri">
-                <fieldset>
-                    <legend><strong>Personal Data</strong></legend>
-            
-                    <p>
-                        <label for='nama'>Nama:</label>
-                        <input type="text" id='nama'>
-                    </p>
-                    <p>
-                        <label for='tempat'>Tempat/Tanggal Lahir:</label>
-                        <input type='text' id='tempat'>
+          <fieldset>
+              <legend><strong>Personal Data</strong></legend>
+      
+              <p>
+                  <label for='nama'>Nama:</label>
+                  <input type="text" id='nama'>
+              </p>
+              <p>
+                  <label for='tempat'>Tempat/Tanggal Lahir:</label>
+                  <input type='text' id='tempat'>
 
-                        <label for='usia'>mm/dd/yyyy:</label>
-                        <input type='number' id='usia'>
-                    </p>
-                    <p>Gender:
-                        <input type='radio' onclick="kelaminKu(this.value)" name = 'sex' value= 'Pria'> Pria
-                        <input type='radio' onclick="kelaminKu(this.value)" name = 'sex' value= 'Wanita'> Wanita
-                    </p>
-                    <p>
-                        <label for='telepon'>Telepon: </label>
-                        <input type='number' id='telepon'>
-                    </p>
-                    <p>
-                        <label for='email'>Email:</label>
-                        <input type='text' id='email'>
-                    </p>
-                    
-                </fieldset>
+                  <label for='usia'>mm/dd/yyyy:</label>
+                  <input type='number' id='usia'>
+              </p>
+              <p>Gender:
+                  <input type='radio' onclick="kelaminKu(this.value)" name = 'sex' value= 'Pria'> Pria
+                  <input type='radio' onclick="kelaminKu(this.value)" name = 'sex' value= 'Wanita'> Wanita
+              </p>
+              <p>
+                  <label for='telepon'>Telepon: </label>
+                  <input type='number' id='telepon'>
+              </p>
+              <p>
+                  <label for='email'>Email:</label>
+                  <input type='text' id='email'>
+              </p>
+              
+          </fieldset>
         </form>
         <form>
-                <fieldset>
-                    <legend><strong>Riwayat Pendidikan</strong></legend>
-            
-                    <p>
-                            <table>
-                                    <tr>
-                                        <th></th>
-                                        <th>Nama institusi</th>
-                                        <th>Tahun lulus</th>
-                                    </tr>
-                                    <tr>
-                                        <td>SD </td>
-                                        <td><input type='text' id='sd'></td>
-                                        <td><input type='number' id='sd lulus'></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SMP </td>
-                                        <td><input type='text' id='smp'></td>
-                                        <td><input type='number' id='smp lulus'></td>
-                                    </tr>
-                                    <tr>
-                                        <td>SMA/SMK </td>
-                                        <td><input type='text' id='sma'></td>
-                                        <td><input type='number' id='sma lulus'></td>
-                                    </tr>
-                                    <tr>
-                                        <td>S1 </td>
-                                        <td><input type='text' id='s1'></td>
-                                        <td><input type='number' id='s1 lulus'></td>
-                                    </tr>
-                            </table>
-                </fieldset>
+          <fieldset>
+              <legend><strong>Riwayat Pendidikan</strong></legend>
+      
+              <p>
+                <table>
+                        <tr>
+                            <th></th>
+                            <th>Nama institusi</th>
+                            <th>Tahun lulus</th>
+                        </tr>
+                        <tr>
+                            <td>SD </td>
+                            <td><input type='text' id='sd'></td>
+                            <td><input type='number' id='sd lulus'></td>
+                        </tr>
+                        <tr>
+                            <td>SMP </td>
+                            <td><input type='text' id='smp'></td>
+                            <td><input type='number' id='smp lulus'></td>
+                        </tr>
+                        <tr>
+                            <td>SMA/SMK </td>
+                            <td><input type='text' id='sma'></td>
+                            <td><input type='number' id='sma lulus'></td>
+                        </tr>
+                        <tr>
+                            <td>S1 </td>
+                            <td><input type='text' id='s1'></td>
+                            <td><input type='number' id='s1 lulus'></td>
+                        </tr>
+                </table>
+          </fieldset>
         </form>
         <form>
                 <fieldset>
@@ -118,6 +118,11 @@
         <p>
             <input type= 'submit' onclick='fungsiKu()' value='SUBMIT'>
         </p>
+        <table id='output'>
+            <tr>
+
+            </tr>
+        </table>
 
         <script>
                 
